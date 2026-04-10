@@ -19,7 +19,7 @@ export class Game {
   }
   playMove(row: number, col: number): void {
     if (this.status !== GameStatus.IN_PROGRESS) {
-      throw new Error("Game is already over");
+      return;
     }
 
     if (!this.board.isValidMove(row, col)) return;
